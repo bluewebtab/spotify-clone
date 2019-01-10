@@ -4,13 +4,14 @@
 
   $timezone = date_default_timezone_set("America/Los_Angeles");
 
-  $host = "us-cdbr-iron-east-01.cleardb.net";
-  $username = "b881f0a57f7cb9";
-  $password = "bf2c1713";
-  $dbName = "heroku_4ffe31d912bbbd6";
+  $cleardb_url      = parse_url(getenv("CLEARDB_DATABASE_URL"));
+  $cleardb_server   = $cleardb_url["host"];
+  $cleardb_username = $cleardb_url["user"];
+  $cleardb_password = $cleardb_url["pass"];
+  $cleardb_db       = substr($cleardb_url["path"],1);
 
 
-  $con = mysqli_connect($host, $username, $password, $dbName);
+  $con = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
   // $con = mysqli_connect("localhost", "ronny", "hello123", "musik");
 
