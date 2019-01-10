@@ -4,7 +4,13 @@
 
   $timezone = date_default_timezone_set("America/Los_Angeles");
 
-  $con = mysqli_connect("us-cdbr-iron-east-01.cleardb.net", "b881f0a57f7cb9", "bf2c1713", "heroku_4ffe31d912bbbd6");
+  $host = "us-cdbr-iron-east-01.cleardb.net";
+  $username = "b881f0a57f7cb9";
+  $password = "bf2c1713";
+  $dbName = "heroku_4ffe31d912bbbd6";
+
+
+  $con = mysqli_connect($host, $username, $password, $dbName);
   
   // $con = mysqli_connect("localhost", "ronny", "hello123", "musik");
 
