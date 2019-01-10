@@ -63,11 +63,7 @@
             <form id="loginForm" action="register.php" method="POST">
               <h2>Login to your account</h2>
               <p>
-              <?php
-              $artistQuery = mysqli_query($con, "SELECT names FROM artists");
-
               
-              echo $artistQuery; ?>
               <?php echo $account->getError(Constants::$loginFailed); ?>
               <label for="loginUsername">Username</label>
               <input id="loginUsername" name="loginUsername" type="text" placeholder="Username" value="<?php getInputValue('loginUsername') ?>" required>
