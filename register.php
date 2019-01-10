@@ -64,7 +64,7 @@
               <h2>Login to your account</h2>
               <p>
               <?php
-              $artistQuery = mysqli_query($this->con, "SELECT names FROM artists");
+              $artistQuery = mysqli_query($con, "SELECT names FROM artists");
 
               
               echo $artistQuery; ?>
