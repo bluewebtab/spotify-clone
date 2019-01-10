@@ -11,7 +11,7 @@
 
 
   $con = mysqli_connect($host, $username, $password, $dbName);
-  
+
   // $con = mysqli_connect("localhost", "ronny", "hello123", "musik");
 
   if(mysqli_connect_errno()){
